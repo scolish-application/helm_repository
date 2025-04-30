@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "backbone.fullname" . }}:{{ .Values.service.port }}']
+      args: ["-O-", "http://{{ include "backbone.fullname" . }}:{{ .Values.service.externalPort }}"]
   restartPolicy: Never
