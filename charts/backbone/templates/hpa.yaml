@@ -1,15 +1,15 @@
-apiVersion: api/autoscalarv2
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-    name: {{ include "backbone.fullname" }}
+    name: {{ include "backbone.fullname" . }}
     labels:
-        chart: {{ include "backbone.fullname" }}
-        app: {{ include "backbone.fullname" }}
+        chart: {{ include "backbone.fullname" . }}
+        app: {{ include "backbone.fullname" . }}
 spec:
     scaleTargetRef:
         apiVersion: apps/v1
         kind: Deployment
-        name: {{ include "backbone.fullname" }}
+        name: {{ include "backbone.fullname" . }}
     minReplicas: 1
     maxReplicas: 3
     metrics:

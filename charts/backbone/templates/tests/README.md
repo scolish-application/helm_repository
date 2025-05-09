@@ -1,1 +1,0 @@
-This dir is responsable to make tests on active service
