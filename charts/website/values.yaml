@@ -1,7 +1,7 @@
 replicaCount: 1
 
 # Image in my local registry
-image: next-js-website-server
+image: scolish-turbo-application-ui-website-server
 
 service:
   name: website
